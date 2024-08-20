@@ -1,0 +1,154 @@
+
+
+
+/* En tu archivo CSS App.css */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Estilo para el contenedor de las cards de Services */
+/* #services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+
+/* Estilos para el fondo */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+.Velustro {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Estilos para la animación de zoom y 3D */
+.zoom-effect-container {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 12px;
+  border: 5px solid transparent;
+  background-image: linear-gradient(white, white), linear-gradient(to right, blue, rgb(202, 145, 202), violet);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.zoom-effect-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-effect-container.zoomed {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-effect-image {
+  transition: transform 0.5s ease;
+  border-radius: 12px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 10;
+}
+
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.5s ease;
+}
+
+/* Estilos para el estado ampliado de la tarjeta */
+.overlay .zoomed-card {
+  max-width: 70%;
+  max-height: 70%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+}
+
+/* Estilos para el contenido */
+.content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté sobre el fondo */
+  scroll-behavior: smooth;
+}
+
+/* Estilos adicionales para la barra de navegación si es necesario */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Estilo para la animación del logo */
+
+.logo-animation:hover {
+  transform: scale(1.1);
+}
+
+/* Posicionamiento del logo dentro de la promoción */
+.relative .absolute {
+  position: absolute;
+}
+
+.text-animation {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.diagonal-ofertas {
+  background-image: url('./assets/bg-fler.webp');
+}
+
